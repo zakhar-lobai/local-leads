@@ -28,17 +28,18 @@ body {
 }
 
 
-.img {
-    height: 100%;
-    margin: 0 auto;
-}
+/*
+img, svg {
+    max-height: 100% !important ;
+    max-width: 100%;
+    object-fit: cover;  
+}*/ 
 
 /* Header */
 .header {
     overflow: hidden;
 	position: relative;
-    min-height: 600px;
-    
+    max-height: 600px;
 }
 
 .header__top {
@@ -60,7 +61,7 @@ body {
     padding-top: 84px;
     padding-left: 25px;
     padding-bottom: 72px;
-    width: 712px;
+    width: 60%;
     /*border-right: solid 2px #0F3D3E;*/
 }
 
@@ -86,11 +87,16 @@ body {
     padding-bottom: 50px;
 }
 
-.header__img {  
-    /*margin-bottom: -1px;*/
-    height: 100%;
-    width: 524px; 
+.header__img {
+    width: 40%;
+    object-fit: cover;
+
     border-left: 2px solid #0F3D3E;
+}
+
+.header__img__img {
+    height: 100%;
+    object-fit: cover;
 }
 
 .btn__header {
@@ -193,7 +199,6 @@ body {
 
 /* Services */
 .services__header {
-    margin-top: -5px;
     height: 124px;
     border-top: 2px solid var(--green);
     border-bottom: 2px solid var(--green);
@@ -290,21 +295,21 @@ body {
 }
 
 .service__item__google {
-    width: 523px;
+    width: 40%;
     border-right: 2px solid var(--green);
 }
 
 .service__item__facebook {
-    width: 712px;
+    width: 60%;
 }
 
 .service__item__web {
-    width: 712px;
+    width: 60%;
     border-right: 2px solid var(--green);
 }
 
 .service__item__smm {
-    width: 523px;
+    width: 40%;
 }
 
 
@@ -345,27 +350,27 @@ body {
 
 .about__header__left {
     width: 50%;
-    padding-top: 26px;
+    padding: 26px 52px;
     border-right: 2px solid var(--green);
 }
 
 .header__left {
-    width: 582px;
-    text-align: center;
+    text-align: left;
     font-family: 'Tomorrow';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     text-transform: uppercase;
+    line-height: 200%;
 }
 
 .about__header__right {
+    width: 50%;
     padding: 26px 52px; 
     
 }
 
-.header__right {
-    width: 497px;   
+.header__right { 
     font-family: 'Tomorrow';
     font-style: normal;
     font-weight: 400;
@@ -404,12 +409,12 @@ body {
 }
 
 .team__item {
-    width: 412px;
+    width: 50%;
     border-bottom: 2px solid var(--green);
 }
 
 .team__item__bottom {
-    width: 618px;
+    width: 50%;
     margin-left: -1px;
     margin-bottom: -1px;
 }
@@ -424,15 +429,22 @@ body {
 .team__img {
     display: block;
     padding-top: 124px;
-    padding-left: 99px;
-    padding-right: 99px;
+    padding-left: 31%;
+ /*   padding-right: 99px; */
+}
+
+.team__img__markian {
+    display: block;
+    padding-top: 80px;
+    padding-left: 40%;
+    /*padding-right: 99px; */
 }
 
 .team__img__bottom {
     display: block;
-    padding-top: 124px;
-    padding-left: 202px;
-    padding-right: 202px;
+    padding-top: 80px;
+    padding-left: 30%;
+    /*padding-right: 25%; */
 }
 
 .team__name {
@@ -462,7 +474,8 @@ body {
 }
 
 .team__item--right {
-    border-left: 2px solid var(--green);
+    width: 100%;
+    
 }
 
 
@@ -558,4 +571,557 @@ body {
     font-size: 14px;
 
     text-transform: uppercase;
+}
+
+
+
+/* Media */
+@media (max-width: 1300px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .nav__list {
+        column-gap: 40px;
+        padding-left: 60px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .container {
+        padding: 0 40px;
+    }
+
+    .header__content {
+        max-width: 550px;
+    }
+
+    .header__img {
+        max-width: 366px;
+    }
+
+    /* Services */
+    .service__item__google {
+        width: 50%;
+    }
+
+    .service__item__facebook  {
+        width: 50%;
+    }
+
+    .service__item__web {
+        width: 50%;
+        border-bottom: 2px solid var(--green);
+    }
+
+    .service__item__smm {
+        width: 50%;
+        border-bottom: 2px solid var(--green);
+    }
+
+    .services__items__bottom {
+        border-bottom: none;
+    }
+
+    .service__btn {
+        padding: 10px 30px;
+    }
+
+    .team__item {
+        width: 50%;
+    }
+
+    .team__item--right {
+        width: 100%;
+        border-left: none;
+    }
+
+    .team__item__bottom {
+        width: 50%;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .team__img__first {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
+    .team__img__markian {
+        padding-left: 38% !important;
+        padding-right: 38% !important;
+    }
+
+    .team__img {
+        padding-left: 25%;
+        padding-right: 25%; 
+    }
+
+    .team__img__bottom {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+}
+
+@media (max-width: 960px) { 
+    .btn--book {
+        display: none;
+    }
+
+    .nav__list {
+        align-items: flex-end;
+    }
+
+    .header__content {
+        width: 60%;
+        padding-right: 20px;
+    }
+
+    .header__img {
+        width: 40%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 850px) {
+    .container {
+        padding: 0 50px ;
+    }
+
+    .nav__list {
+		display: none;
+	}
+
+    .nav {
+		column-gap: 50px;
+	}
+
+	.nav__list {
+		column-gap: 50px;
+	}
+
+	.nav__toggle {
+		display: block;
+        padding-right: 20px;
+	}
+
+	.no-scroll {
+		overflow-y: hidden;
+	}
+
+    .nav--mobile .logo {
+		font-size: 34px;
+	}
+	.nav--mobile .nav__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 40px;
+
+		font-size: 22px;
+	}
+
+	.nav--mobile .nav__list a.active::after,
+	.nav--mobile .nav__list a:hover::after {
+		display: none;
+	}
+
+	.nav--mobile .nav__login {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 40px;
+
+		font-size: 22px;
+	}
+
+	.nav--mobile .nav__toggle {
+		position: fixed;
+		top: 50px;
+		right: 50px;
+	}
+
+    .header {
+        max-height: fit-content;
+    }
+
+    .header__bottom {
+        flex-direction: column-reverse;
+        width: auto;
+    }
+
+    .header__content{
+        padding-top: 23px;
+        padding-left: 21px;
+        padding-right: 21px;
+        max-width: fit-content;
+        width: fit-content;
+    }
+
+    .header__img {
+        max-width: 100%;
+        width: 100%;
+        height: 250px;
+        border-left: none;
+        border-right: none;
+    }
+
+    .header__img__img {
+        width: 100%;
+    }
+
+    .header__title {
+        width: fit-content;
+        max-width: none;
+        font-size: 30px;
+        line-height: 150%;
+        padding-bottom: 20px;
+    }
+
+    .header__description {
+        padding-bottom: 40px;
+        max-width: fit-content;
+    }
+
+    .btn__header {
+        font-size: 32px;
+    }
+
+    .service__item__google {
+        width: 50%;
+    }
+
+    .service__item__facebook {
+        width: 50%;
+    }
+
+    .service__item__web {
+        width: 50%;
+    }
+
+    .service__item__smm {
+        width: 50%;
+    }
+
+    .services__title {
+        padding-top: 65px;
+        font-size: 26px;
+    }
+
+    .services__price {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+
+    .services__descriptions {
+        font-size: 18px;
+        max-width: 280px;
+        padding-bottom: 60px;
+        padding-left: 19px;
+        padding-right: 19px;
+    }
+
+    .services__btn {
+        padding-bottom: 50px;
+    }
+
+    .about__header__title {
+        padding: 19px 0 19px 19px;
+        text-align: left;
+        font-size: 30px;
+    }
+
+    .header__left {
+        line-height: 170%;
+        max-width: auto;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .header__right {
+        max-width: auto;
+    }
+
+    .about__header__left {
+        padding: 23px 26px 100px 26px;
+    }
+
+    .about__header__right {
+        line-height: 170%;
+        width: 50%;
+        padding: 23px 26px 100px 26px;
+    }
+
+    /* Team */
+    .team__title {
+        padding-left: 19px;
+        padding-top: 14px;
+        font-size: 30px;
+    }
+
+    .team__item {
+        width: 50%;
+    }
+
+    .team__name {
+        padding-top: 35px;
+    }
+
+    .team__item--right {
+        border-left: none;
+    }
+
+    .team__item__bottom {
+        width: 50%;
+    }
+
+    .team__item--right {
+        width: 100%;
+        padding-left: auto;
+        padding-right: auto;
+        
+    }
+
+    .team__img {
+        padding-top: 108px;
+    }
+
+    .team__img__bottom {
+        padding-top: 108px ;
+    }
+
+    .team__img--markian {
+        padding-left: 237px;
+        padding-right: 237px;
+    }
+
+    .header__img__a {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav__list {
+        display: none;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .header__title {
+        width: fit-content;
+        font-size: 30px;
+        line-height: 150%;
+    }
+
+    .services__title {
+        padding-top: 50px;
+    }
+
+    .services__descriptions {
+        max-width: fit-content;
+        padding-left: 0px;
+        padding-right: 0px;
+        line-height: 160%;
+    }
+
+    .service__item__google {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid var(--green);
+    }
+
+    .service__item__facebook {
+        width: 100%;
+        border-right: none;
+    }
+
+    .service__item__web {
+        width: 100%;
+        border-right: none;
+    }
+
+    .service__item__smm {
+        width: 100%;
+        border-right: none;
+    }
+
+    .about__header__title {
+        padding-top: 50px;
+    }
+
+    .team__img__markian {
+        padding-top: 40px !important;
+    }
+
+    .team__img__bottom {
+        padding-top: 40px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .team__title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 540px) {
+    .team__title {
+        font-size: 24px;
+    }
+    
+    .team__img {
+        padding-top: 101px;
+    }
+
+    .team__description {
+        padding: 10px 10px 40px 10px;
+    }
+}
+
+@media (max-width: 494px) {
+    .team__img {
+        padding-top: 130px;
+    }
+}
+
+@media (max-width: 440px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .header__title {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 391px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .logo {
+        padding-left: 10px;
+    }
+
+    .header__content {
+        max-width: 288px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 10px;
+    }
+
+    .header__title {
+        max-width: 286px;
+        font-size: 18px;
+        padding-bottom: 7px;
+    }
+
+    .header__description {
+        font-size: 14px;
+        padding-bottom: 16px;
+    }
+
+    .header__img {
+        width: 100%;
+        height: 135px;
+    }
+
+    .header__img__img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .btn__header {
+        font-size: 20px;
+    }
+
+
+    /* Services */
+    .services__header {
+        height: auto;
+    }
+
+    .services__header__title {
+        font-size: 25px;
+        padding: 20px 0;
+    }
+
+    .services__title {
+        padding-top: 35px;
+        font-size: 18px;
+    }
+
+    .services__price {
+        font-size: 12px;
+    }
+
+    .services__descriptions {
+        font-size: 16px;
+        width: fit-content;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    .service__btn {
+        font-size: 14px;
+        padding: 7px 15px;
+    }
+
+    .services__btn {
+        padding-bottom: 45px;
+    }
+
+    .header__content {
+        padding-bottom: 25px;
+    }
+
+    .header__left {
+        max-width: 130px;
+    }
+
+    .header__right {
+        max-width: 130px;
+    }
+
+    /* Team */
+    .team {
+        margin-top: -2px;
+    }
+
+    .team__img {
+       padding-top: 110.6px; 
+    }
+
+    .team__img__first {
+        padding-top: 40px;
+    }
+
+    .team__img__markian {
+        padding-top: 40px;
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+
+    .team__img__bottom {
+        padding-top: 40px;
+        padding-left: 25%;
+        padding-right: 25%;
+    } 
+}
+
+@media (max-width: 330px) {
+    .team__name {
+        font-size: 22px;
+    }
 }
