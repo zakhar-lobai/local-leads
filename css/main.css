@@ -27,6 +27,65 @@ body {
     list-style-type: none;
 }
 
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 2px solid var(--green);
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+input[type=name] {
+    width: 45%;
+    margin-right: 9%;
+    padding: 15px 20px 15px 20px; /* Some padding */ 
+    border: 2px solid var(--green); 
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=mail] {
+    width: 45%;
+    padding: 15px 20px 15px 20px; /* Some padding */ 
+    border: 2px solid var(--green); 
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: var(--green);
+    color: #fff;
+    padding: 10px 54px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Graduate';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    /* identical to box height, or 21px */
+    text-transform: uppercase;
+  }
+
+  .contact__btn {
+    text-align: center;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: transparent;
+    border: 2px solid var(--green);
+    color: var(--green);
+  }
+
 
 /*
 img, svg {
@@ -641,6 +700,85 @@ img, svg {
 
 
 
+/* Contact */
+.contact__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-right: 2px solid var(--green);
+    border-left: 2px solid var(--green);
+    border-bottom: 2px solid var(--green);
+    padding: 28px 20px 40px 20px;
+}
+
+.contact__title {
+    font-family: 'Tomorrow';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 54px;
+    text-transform: uppercase;
+    border-right: 2px solid var(--green);
+    border-left: 2px solid var(--green);
+    padding-left: 20px;
+    padding-top: 25px;
+    padding-bottom: 28px;
+}
+
+.mapouter {
+    max-width: 470px;
+    width: 100%;
+    border: 2px solid var(--green);
+    height: fit-content;
+    max-height: 100%;
+}
+
+.form__title {
+    padding-top: 40px;
+    padding-bottom: 25px;
+    text-align: center;
+    font-family: 'Tomorrow';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.contact__form {
+    border: 2px solid var(--green);
+    max-width: 550px;
+    width: fit-content;
+    background-color: #fff;
+    padding: 0 35px 30px 35px;
+}
+
+.fname {
+    width: 50%;
+}
+
+.email {
+    width: 50%;
+}
+
+.footer__content {
+    border-left: 2px solid var(--green);
+    border-right: 2px solid var(--green);
+    padding: 15px 0;
+}
+
+.footer__text {
+    text-align: center;
+    font-family: 'Graduate';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    /* identical to box height, or 21px */
+    text-transform: uppercase;
+    color: var(--green);
+}
+
+
 /* Media */
 @media (max-width: 1300px) {
     .container {
@@ -648,7 +786,19 @@ img, svg {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1170px) {
+    .contact__form {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 1046px) {
+    .mapouter {
+        width: 45%;
+    }
+}
+
+@media (max-width: 1001px) {
     .nav__list {
         column-gap: 40px;
         padding-left: 60px;
@@ -731,6 +881,27 @@ img, svg {
         padding-left: 25%;
         padding-right: 25%;
     }
+
+    .contact__content {
+        padding: 0;
+    }
+
+    .mapouter {
+        width: 100% !important;
+        max-width: none;
+        border-right: none;
+        border-left: none;
+    }
+
+    .contact__form {
+        margin-top: 40px !important;
+        margin-bottom: 30px !important;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
 }
 
 @media (max-width: 960px) { 
@@ -994,6 +1165,10 @@ img, svg {
     .btn--book {
         display: none;
     }
+
+    .contact__form {
+        max-width: 500px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1055,7 +1230,18 @@ img, svg {
         padding-top: 40px;
     }
 
+   .contact__form {
+    max-width: 400px;
+   }
    
+   input[type=name] {
+        width: 100%;
+    }
+
+    input[type=mail] {
+        width: 100%;
+    }
+
 
 }
 
@@ -1069,7 +1255,11 @@ img, svg {
     }
 
     .logo {
-        padding-left: 0;
+        padding-left: 10px;
+    }
+
+    .contact__form {
+        max-width: 350px;
     }
 }
 
@@ -1077,8 +1267,6 @@ img, svg {
     .container {
         padding: 0 30px;
     }
-
-    
 
     .team__title {
         font-size: 24px;
@@ -1097,6 +1285,15 @@ img, svg {
     .team__img {
         padding-top: 130px;
     }
+
+    .contact__form {
+        max-width: 300px;
+    }
+
+    .form__title {
+        font-size: 20px;
+    }
+   
 }
 
 @media (max-width: 440px) {
@@ -1107,7 +1304,20 @@ img, svg {
     .header__title {
         font-size: 26px;
     }
+
+    .contact__form {
+        max-width: 100% !important;
+        width: 100% !important;
+        border: 0;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    input[type=text], select, textarea {
+        height: 180px;
+    }
 }
+    
 
 @media (max-width: 391px) {
     .container {
@@ -1226,7 +1436,7 @@ img, svg {
     } 
 }
 
-@media (max-width: 330px) {
+@media (max-width: 350px) {
     .team__name {
         font-size: 22px;
     }
